@@ -1,0 +1,74 @@
+<!--
+  Copyright 2019 OPEN-EYES S.r.l.
+
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<script type="text/javascript">
+    RED.nodes.registerType('clr-text',{
+        category: 'OpenEyes',
+        color: '#a6bbcf',
+        defaults: {
+            cmd: {value:"1"},
+            name: {value:""}    //  along with default values.
+       	},
+        inputs:1,
+        outputs:0,
+        icon: "trash-symbol.png",
+	    label: function() {     // sets the default label contents
+            return this.name||this.topic||"clr-text";
+        },
+        labelStyle: function() { // sets the class to apply to the label
+            return this.name?"node_label_italic":"";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="clr-text">
+
+    <div class="form-row">
+        <label for="node-input-cmd"><i class="icon-tag"></i> Text </label>
+        <select type="text" id="node-input-cmd" style="width:70%;">
+            <option value="1">Del text</option>
+            <option value="2">Del box text</option>
+        </select>
+    </div>
+
+	<div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+</script>
+
+<script type="text/x-red" data-help-name="clr-text">
+    <p>An OpenEyes GUI interface node that remove a text from LCD display</p>
+
+	<h3>Node properties</h3>
+    <ul>
+		<code>Button id</code> - Button identifier (1..6).
+    </ul>
+	<ul>
+		<code>Name</code> - Name.
+    </ul>
+
+	<h3>Details</h3>
+    <p>Node that build a posix massage to inform LCD control task to remove button <p>
+
+	<h3>References</h3>
+    <ul>
+        <li><a>GitHub</a> - the nodes github repository</li>
+    </ul>
+
+</script>

@@ -1,0 +1,28 @@
+{
+	"dependencies": {
+		"posix-mq": "^1.1.2"
+	},
+	"name": "openeyes-clrtext",
+	"version": "0.0.3",
+	"description": "Delete text on open-eyes LCD",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nemax68/node-red-contrib-openeyes-clrtext"
+	},
+	"license": "GPL-3.0",
+	"keywords": [
+		"node-red",
+		"contrib",
+		"OpenEyes",
+		"text"
+	],
+	"node-red": {
+		"nodes": {
+			"clr-text": "clrtext/clrtext.js"
+		}
+	},
+	"author": {
+		"name": "Massimiliano Negretti",
+		"email": "massimiliano.negretti@open-eyes.it"
+	}
+}
