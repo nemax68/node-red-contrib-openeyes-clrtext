@@ -50,8 +50,6 @@ module.exports = function (RED) {
 
                 var strJSON = JSON.stringify(obj);
 
-                console.log(strJSON);
-
                 posixmq.open({ name: node.queue, create: false });
                 posixmq.push(strJSON);
                 posixmq.close();
