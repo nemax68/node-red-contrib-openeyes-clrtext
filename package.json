@@ -3,7 +3,7 @@
 		"posix-mq": "^1.1.2"
 	},
 	"name": "openeyes-clrtext",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "Delete text on open-eyes LCD",
 	"repository": {
 		"type": "git",
